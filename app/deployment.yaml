@@ -23,6 +23,9 @@ spec:
       containers:
       - name: spring-petclinic
         imagePullPolicy: Always
+        volumeMounts:
+          - name: test-claim
+            mountPath: /mnt/test
         image: quay.io/service-binding/spring-petclinic:latest
         livenessProbe:
           failureThreshold: 3
