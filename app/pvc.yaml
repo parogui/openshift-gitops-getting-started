@@ -3,6 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: test-claim
   namespace: parodrig-gitops
+  finalizers: kubernetes.io/pv-protection
 spec:
   accessModes:
     - ReadWriteOnce
