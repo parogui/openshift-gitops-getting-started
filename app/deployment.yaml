@@ -20,12 +20,12 @@ spec:
       labels:
         app: spring-petclinic
     spec:
+      volumeMounts:
+          - name: claim
+            mountPath: /mnt/test
       containers:
       - name: spring-petclinic
         imagePullPolicy: Always
-        volumeMounts:
-          - name: test-claim
-            mountPath: /mnt/test
         image: quay.io/service-binding/spring-petclinic:latest
         livenessProbe:
           failureThreshold: 3
@@ -45,7 +45,7 @@ spec:
         - containerPort: 8778
           protocol: TCP
         volumes:
-          - name: test-claim
+          - name: claim
             persistentVolumeClaim:
               claimName: test-claim
         readinessProbe:
