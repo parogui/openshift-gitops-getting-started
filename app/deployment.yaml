@@ -44,6 +44,10 @@ spec:
           protocol: TCP
         - containerPort: 8778
           protocol: TCP
+        volumes:
+          - name: test-claim
+            persistentVolumeClaim:
+              claimName: test-claim
         readinessProbe:
           failureThreshold: 3
           httpGet:
