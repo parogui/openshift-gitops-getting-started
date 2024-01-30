@@ -1,15 +1,13 @@
-- apiVersion: v1
-  kind: PersistentVolumeClaim
-  metadata:
-    finalizers:
-    - kubernetes.io/pvc-protection
-    name: test-claim
-    namespace: parodrig-gitops
-  spec:
-    accessModes:
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: example
+  namespace: parodrig-gitops
+spec:
+  accessModes:
     - ReadWriteOnce
-    resources:
-      requests:
-        storage: 1Gi
-    storageClassName: thin
-    volumeMode: Filesystem
+  storageClassName: thin
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 1Gi
