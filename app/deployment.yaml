@@ -13,8 +13,8 @@ metadata:
       [
         {"from":
           {"kind":"ImageStreamTag",
-          "name":"aula-virtual-moodle:2.17.2"},
-        "fieldPath":"spec.template.spec.containers[?(@.name==\"aula-virtual\")].image"}
+          "name":"spring-petclinic:latest"},
+        "fieldPath":"spec.template.spec.containers[?(@.name==\"spring-petclinic\")].image"}
       ]
   name: spring-petclinic
 spec:
