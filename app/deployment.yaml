@@ -7,7 +7,7 @@ metadata:
        {
          "from": {
            "kind": "ImageStreamTag",
-           "name": "spring-petclinic:latest", 
+           "name": "spring-petclinic:2", 
            "namespace": "parodrig-gitops"
          },
          "fieldPath": "spec.template.spec.containers[?(@.name==\"spring-petclinic\")].image"
@@ -37,7 +37,7 @@ spec:
       containers:
       - name: spring-petclinic
         imagePullPolicy: Always
-        image: image-registry.openshift-image-registry.svc:5000/parodrig-gitops/spring-petclinic:latest
+        image: image-registry.openshift-image-registry.svc:5000/parodrig-gitops/spring-petclinic:2
         livenessProbe:
           failureThreshold: 3
           httpGet:
