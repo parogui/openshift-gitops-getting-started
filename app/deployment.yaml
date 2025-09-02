@@ -14,7 +14,7 @@ metadata:
         {"from":
           {"kind":"ImageStreamTag",
           "name":"spring-petclinic:latest"},
-        "fieldPath":"spec.template.spec.containers[0].image"}
+        "fieldPath":"spec.template.spec.containers[0].image']"}
       ]
   name: spring-petclinic
 spec:
